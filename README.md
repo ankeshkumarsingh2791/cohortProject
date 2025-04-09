@@ -1,2 +1,0 @@
-# cohortProject
-Landing page
