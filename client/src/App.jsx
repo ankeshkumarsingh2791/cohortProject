@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar'
+import HomeHero from './components/HomeHero'
 
 
 function App() {
@@ -8,9 +9,11 @@ function App() {
   return (
     <>
      
-      <div className='w-full h-screen flex items-center justify-center'>
+      <div className='w-full h-screen '>
         <NavBar />
-        <h1 className='text-4xl font-bold'>Welcome to ChaiCode</h1>
+        <div className=' mt-10  bg-blue-50  '>
+          <HomeHero />
+        </div>
       </div>
       
     </>

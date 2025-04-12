@@ -20,7 +20,7 @@ const NavBar = () => {
 
 
   return (
-    <div className='max-w-[100rem] w-full bg-white fixed top-0 z-50'>
+    <div className='max-w-[100rem] w-full bg-blue-300 fixed top-0 z-50'>
       {/* Top Navigation */}
      
       {/* Main Navigation */}
