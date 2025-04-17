@@ -1,1 +1,78 @@
 @import "tailwindcss";
+
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+  
+  .group:hover .animate-scroll {
+    animation-play-state: paused;
+  }
+  
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinSlowReverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spinSlow 90s linear infinite;
+  }
+  
+  .animate-spin-slow-reverse {
+    animation: spinSlowReverse 70s linear infinite;
+  }
+  
+  @keyframes outer {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .animate-outer {
+    animation: outer 30s linear infinite;
+  }
+
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  
