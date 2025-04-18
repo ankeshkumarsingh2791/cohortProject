@@ -27,7 +27,7 @@ const HomePage = () => {
           <AboutCard className={`flex flex-col md:flex-row-reverse` } />
   
        </div>
-       <Form />
+       {/* <Form /> */}
         <Testimonial />
        <Footer />
        </div>

@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Layout from "./components/layout";
 import ContactUsPage from "./pages/ContactUsPage";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Route path="/" element={<Layout />} />
         <Route index element={<HomePage />} />
         <Route path="/contact" element={<ContactUsPage />} />
+        <Route path="/services" element={<Services />} />
+
       </Routes>
     </>
   //   <div className="w-full h-full  relative">

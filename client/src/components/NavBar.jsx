@@ -8,7 +8,7 @@ import { NavLink,Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Work', path: '/' },
-  { name: 'Capabilities', path: '/' },
+  { name: 'Capabilities', path: '/services' },
   { name: 'About Us', path: '/' },
   { name: 'Blogs', path: '/' },
   { name: 'Contact Us', path: '/contact' },
