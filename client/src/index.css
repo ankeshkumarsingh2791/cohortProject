@@ -75,4 +75,27 @@
     transform: rotateY(180deg);
   }
   
+
+ .bg-gradient-vertical {
+  background: linear-gradient(
+    to bottom, #573393,#0E0455
+    
+  );
+} 
+
+.bg-gradient-horizontal {
+  background: linear-gradient(
+    to right,  #E4EBF6, #BBCFF8 ,#92B3FB,#407BFF
+    
+  );
+}
+
+.text-gradient {
+  color: linear-gradient(
+    to right, #407BFF,#2c3d61, #061127,#E4EBF6
+    
+  );
+ 
+  -webkit-text-fill-color: transparent;
+}
   
