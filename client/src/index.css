@@ -92,10 +92,10 @@
 
 .text-gradient {
   color: linear-gradient(
-    to right, #407BFF,#2c3d61, #061127,#E4EBF6
+    to right, #FFFFFF, #9746FF
     
   );
  
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
 }
   

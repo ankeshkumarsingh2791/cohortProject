@@ -3,7 +3,7 @@ import PopupContainer from "./PopupContainer";
 import PopCard from "./PopCard";
 import { motion, useInView } from "framer-motion";
 
-const Herotext = ({ text= 'Typing Effect', className }) => {
+const Herotext = ({ text = "Typing Effect", className }) => {
   const [show, setShow] = useState(false);
   const handlePop = () => {
     setShow(true);
@@ -24,31 +24,35 @@ const Herotext = ({ text= 'Typing Effect', className }) => {
     }
   }, [isInView, text]);
   return (
-    <div className={`w-full  flex justify-center items-center  flex-col h-screen ${className}`} >
-    
-       <h2
-      ref={ref}
-      className="text-xl  text-center sm:text-4xl font-bold  md:text-9xl py-8  md:leading-[4rem]"
+    <div
+      className={`w-full mt-20   flex justify-center items-center  flex-col max-h-screen ${className}`}
     >
-      {text.split(" ").map((letter, index) => (
+      <h2
+        ref={ref}
+        className="text-4xl bg-gradient-to-r from-[#FFFFFF] via-red-300 to-[#9746FF] bg-clip-text text-transparent  text-center sm:text-4xl font-bold  md:text-9xl  md:leading-[4rem]"
+      >
+        {text.split(" ").map((letter, index) => (
         <motion.span
         key={`${animationKey}-${index}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: index * 0.1 }}
+        transition={{ duration: 0.8, delay: index * 0.5 }}
+        className="inline-block md:py-10 px-2 md:px-4"
       >
           {letter}
         </motion.span>
       ))}
-    </h2>
+
+       
+      </h2>
       <button
         onClick={handlePop}
-        className="p-4 mt-10 flex bg-gradient-horizontal text-gray-50 font-medium rounded-4xl"
+        className="p-4 mt-10 flex bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl"
       >
         GET IN TOUCH{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="mt-2"
+          className="animate-ping ml-2"
           width="24"
           height="24"
           viewBox="0 0 24 24"
