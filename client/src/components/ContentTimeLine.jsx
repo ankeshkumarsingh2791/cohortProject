@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const ContentTimeLine = () => {
   return (
     <div className="  w-full p-10 ">
-    <div className=" max-w-3xl w-full h-[400px]">
+    <div className="  max-w-3xl w-full h-[400px]">
      
 
      

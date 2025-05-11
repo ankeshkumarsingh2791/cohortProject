@@ -29,7 +29,7 @@ const Herotext = ({ text = "Typing Effect", className }) => {
     >
       <h2
         ref={ref}
-        className="text-4xl bg-gradient-to-r from-[#FFFFFF] via-red-300 to-[#9746FF] bg-clip-text text-transparent  text-center sm:text-4xl font-bold  md:text-9xl  md:leading-[4rem]"
+        className="text-4xl bg-gradient-to-r from-[#FFFFFF] via-red-300 to-[#9746FF] bg-clip-text text-transparent  text-center sm:text-7xl font-bold lg:text-9xl lg:leading-[4rem]   md:leading-[2rem]"
       >
         {text.split(" ").map((letter, index) => (
         <motion.span

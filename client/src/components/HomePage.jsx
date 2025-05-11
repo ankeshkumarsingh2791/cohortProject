@@ -13,35 +13,28 @@ import { useInView } from "framer-motion";
 
 const offerCardsData = [
   {
+    title: "Tech Consulting",
+    leftImage: "/Software.svg",
+    rightImage: "/Offer1.svg",
+    items: [
+      { text: "Web Site Development" },
+      { text: "Seo Optimization" },
+      { text: "Android & Ios Development" },
+      { text: "Software Development" },
+
+    ],
+  },
+  {
     title: "Social Media Marketing",
-    leftImage: "/Ankesh.jpg",
-    rightImage: "/Ankesh.jpg",
+    leftImage: "/influencer 1.svg",
+    rightImage: "/Rectangle 23.svg",
     items: [
-      { text: "Hello Ankesh 1" },
-      { text: "Hello Ankesh 2" },
-      { text: "Hello Ankesh 3" },
+      { text: "Influencer collaboration" },
+      { text: "Brand Awareness" },
+      { text: "Targeted campaigns on Facebook" },
     ],
   },
-  {
-    title: "Brand Building",
-    leftImage: "/Ankesh.jpg",
-    rightImage: "/Ankesh.jpg",
-    items: [
-      { text: "Create Authority" },
-      { text: "Grow Community" },
-      { text: "Improve Trust" },
-    ],
-  },
-  {
-    title: "Influencer Management",
-    leftImage: "/Ankesh.jpg",
-    rightImage: "/Ankesh.jpg",
-    items: [
-      { text: "Onboard Creators" },
-      { text: "Track Campaigns" },
-      { text: "Boost Reach" },
-    ],
-  },
+ 
 ];
 
 const ProgressIndicator = () => {
@@ -101,23 +94,24 @@ const HomePage = () => {
       <div 
       ref={container}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      className="w-full relative h-[] mt-10 flex flex-col snap-y snap-mandatory">
+      className="w-full relative  px-6  mt-10 flex flex-col snap-y snap-mandatory">
         {offerCardsData.map((card, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="w-full rounded-3xl py-8 h-screen bg-red-600 flex snap-center justify-center items-center px-6 sm:px-10 mt-10"
-          >
+          // <motion.div
+          //   key={index}
+            // initial={{ opacity: 0, y: 50 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5, delay: 0.2 }}
+            // viewport={{ once: false, amount: 0.3 }}
+          //   className="w-full rounded-3xl py-8 flex snap-center justify-center items-center px-6 sm:px-10 mt-10"
+          // >
             <OfferCard
+            key={index}
               title={card.title}
               leftImage={card.leftImage}
               rightImage={card.rightImage}
               items={card.items}
             />
-          </motion.div>
+          // </motion.div>
         ))}
       </div>
 

@@ -3,10 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import ContentTimeLine from '../ContentTimeLine';
 const Description = ({text}) => {
     const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const isInView = useInView(ref, { once: false });
   return (
     <div className='w-full sm:flex justify-center items-center'>
-        <div className='md:w-1/2 flex-col m-10 rounded-2xl  flex justify-between gap-4'>
+        <div className='md:w-1/2 flex-col m-10 rounded-2xl  flex justify-between items-center gap-4'>
             <motion.p 
             animate={{x:[50, 150, 0], opacity: 1, scale: 1}}
             transition={{
