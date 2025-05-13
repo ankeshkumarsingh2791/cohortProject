@@ -5,7 +5,7 @@ import Footer from '../components/utils/Footer'
 
 const ContactUsPage = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full bg-gradient-horizontal ">
         <NavBar />
         <div className=' w-full flex flex-col sm:flex-row gap-4 mt-18 md:mt-0 md:h-screen    md:justify-center md:items-center'>
             <div className=' sm:w-1/2 flex md:pl-10 items-center'>

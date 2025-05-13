@@ -9,7 +9,7 @@ const TextArea = ({title, required,name,value,onChange}) => {
     <textarea
      
       id={title}
-      className="peer py-1 px-2 w-full border-none outline-1 rounded-md resize-none bg-transparent placeholder-transparent focus:border-transparent focus:ring-0 focus:outline-hidden"
+      className="peer py-1 px-2 w-full border-none outline-1 rounded-md resize-none bg-transparent  placeholder-transparent focus:border-transparent focus:ring-0 focus:outline-hidden"
       placeholder={title}
       name={name}
       value={value}

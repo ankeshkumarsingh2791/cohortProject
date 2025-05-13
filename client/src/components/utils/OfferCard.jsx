@@ -9,7 +9,7 @@ const OfferCard = ({ title, leftImage, rightImage, items }) => {
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: 0.2 }}
     viewport={{ once: false, amount: 0.3 }}
-    className="w-full mt-10 rounded-2xl bg-[#9746FF] pb-8 flex flex-col-reverse sm:flex-row justify-between sm:items-center">
+    className="w-full mt-10 rounded-2xl bg-[#9746FF] pb-8  lg:py-8 px-4 flex flex-col-reverse sm:flex-row justify-between sm:items-center">
       <div className="sm:w-1/2 px-6">
       <div className="w-32 h-32 mt-10 rounded-full bg-[#0E79F3] flex justify-center items-center ">
 
@@ -28,8 +28,8 @@ const OfferCard = ({ title, leftImage, rightImage, items }) => {
         ))} 
         </div>
       </div>
-      <div className="sm:1/2 ">
-        <img src={rightImage} className=" object-cover m-10 rounded-3xl h-[200px]" />
+      <div className="sm:w-1/2 flex justify-center items-center ">
+        <img src={rightImage} className=" object-fill  rounded-3xl h-[300px]" />
       </div>
     </motion.div>
   );

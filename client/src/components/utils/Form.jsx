@@ -6,7 +6,7 @@ import { useState } from "react";
 const Form = () => {
   const [loading, setLoading] = useState(false);
   return (
-    <div className="w-full h-full flex flex-col bg-gray-100 gap-8 mb-4 rounded-3xl shadow-2xl p-4 md:pr-6">
+    <div className="w-full h-full flex flex-col bg-gray-300 gap-8 mb-4 rounded-3xl shadow-2xl p-4 md:pr-6">
       <h1 className="  font-semibold text-3xl">Are You Interested In : </h1>
       
       <div className="w-full  grid grid-cols-1 xl:grid-cols-2 gap-10 justify-between ">
