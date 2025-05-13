@@ -1,7 +1,7 @@
 
 import { useEffect,useState } from 'react';
 import { NavLink,Link } from 'react-router-dom';
-
+import {motion} from 'framer-motion';
 
 
 
@@ -45,8 +45,8 @@ const NavBar = () => {
 
 
   return (
-    <div  className={`w-full px-4 py-2 text-xl flex justify-between fixed top-0 left-0 z-50 transition-colors duration-300 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+    <div  className={`w-full  px-4 py-2 text-xl flex justify-between items-center  fixed top-0 left-0 z-50 transition-colors duration-300 ${
+      isScrolled ? 'bg-gradient-vertical h-16 shadow-md' : 'bg-transparent'
     }`}>
        <div>Logo</div>
        <div>
@@ -57,7 +57,12 @@ const NavBar = () => {
           </button>
           {isHamburger && (
             <div className=' w-full h-screen absolute top-10 right-0 bg-white  p-4'>
-              <div className='flex flex-col mt-10 px-8 mb-4 space-y-2 hover:text-blue-400'>
+              <motion.div 
+            initial={{ opacity: 0, y: 150 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+              className='flex flex-col mt-10 px-8 mb-4 space-y-2 hover:text-blue-400'>
               {navLinks.map((link) => (
             <NavLink
               key={link.name}
@@ -71,7 +76,7 @@ const NavBar = () => {
               {link.name}
             </NavLink>
           ))}
-              </div>
+              </motion.div>
               <hr className='w-full h-2 mt-10 ' />
             </div>
           )}

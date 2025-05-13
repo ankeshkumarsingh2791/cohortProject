@@ -5,24 +5,22 @@ const Description = ({text}) => {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: false });
   return (
-    <div className='w-full sm:flex justify-center items-center'>
-        <div className='md:w-1/2 flex-col m-10 rounded-2xl  flex justify-between items-center gap-4'>
-            <motion.p 
-            animate={{x:[50, 150, 0], opacity: 1, scale: 1}}
-            transition={{
-                duration: 5,
-                delay: 0.1,
-                ease: [0.5, 0.71, 1, 1.5]
-            }}
-            initial={{opacity: 0, scale: 0.5}}
-            whileInView={{ scale: 1}}
-            className=' text-xl md:text-7xl text-center  font-bold text-white '>
+    <div className='w-full h-screen md:flex  justify-between items-center  md:flex-row '>
+        <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
+        className='md:w-1/2 flex-col m-10 rounded-2xl  flex justify-between  gap-4'>
+            <p 
+          
+            className=' text-3xl md:text-7xl   font-bold text-white '>
                 What <br /> Define Us
-            </motion.p>
+            </p>
             <p 
                 ref={ref}
-            className='text-2xl text-center font-medium text-white'>
-                {text.split("").map((letter, index) => (
+            className='text-2xl   font-medium text-white'>
+                {/* {text.split("").map((letter, index) => (
                     <motion.span
                         key={index}
                         initial={{opacity: 0,}}
@@ -31,9 +29,11 @@ const Description = ({text}) => {
                         >
                             {letter}
                     </motion.span>
-                ))}
+                ))} */}
+                {text}
+                
             </p>
-        </div>
+        </motion.div>
 
         <div className='md:w-1/2 '>
             <ContentTimeLine />

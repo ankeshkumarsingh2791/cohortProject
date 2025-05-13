@@ -52,7 +52,7 @@ const HomePage = () => {
   const container = useRef(null);
   const isInView = useInView(container, { once: true, root: container });
   return (
-    <div className=" overflow-hidden w-full flex flex-col bg-gradient-vertical text-white ">
+    <div className=" overflow-hidden w-full flex flex-col gap-5 bg-gradient-vertical text-white ">
       <NavBar />
 
       <Herotext text={"Teach That Fuels influence"} />

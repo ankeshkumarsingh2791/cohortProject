@@ -4,7 +4,7 @@ const TextArea = ({title, required,name,value,onChange}) => {
       <div className='w-full '>
           <label
     htmlFor={title}
-    className="relative block rounded-md border border-gray-200 shadow-xs focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+    className="relative block rounded-md shadow-xs focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
   >
     <textarea
      

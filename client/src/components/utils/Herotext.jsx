@@ -25,7 +25,7 @@ const Herotext = ({ text = "Typing Effect", className }) => {
   }, [isInView, text]);
   return (
     <div
-      className={`w-full mt-20   flex justify-center items-center  flex-col max-h-screen ${className}`}
+      className={`w-full mt-20  lg:h-screen  flex justify-center items-center  flex-col max-h-screen ${className}`}
     >
       <h2
         ref={ref}
