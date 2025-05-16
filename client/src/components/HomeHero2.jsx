@@ -16,12 +16,12 @@ const HomeHero2 = () => {
       
        <motion.div 
        
-       className=" absolute -top-16 lg:top-28 -left-2 md:left-12 ">
-        <img src="/Rectangle 13 (1).svg" className="w-60 h-44 rounded-2xl  object-cover" />
+       className=" absolute -top-16 lg:top-28 -left-2 md:left-12  ">
+        <img src="/img2.jpg" className="w-60 h-44 rounded-2xl border-t-8 border-[#9746FF] object-fill" />
        </motion.div>
 
        <div className=" absolute top-[60%] md:bottom-28 right-0 md:right-12 ">
-        <img src="/Rectangle 14 (1).svg" className="w-60 h-44   rounded-2xl  object-cover" />
+        <img src="/img1.jpg" className="w-60 h-44   rounded-2xl border-t-8 border-[#9746FF] object-fill" />
        </div>
         <div className=" w-full  md:w-[75%] border-4 rounded-2xl  border-dashed  h-[280px] mx-4 md:mx-0 md:m-10 shadow-lg">
 

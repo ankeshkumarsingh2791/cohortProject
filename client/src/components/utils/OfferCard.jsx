@@ -21,7 +21,7 @@ const OfferCard = ({ title, leftImage, rightImage, items }) => {
         {items?.map((item, index) => (
           <div
             key={index}
-            className="border-2 border-white text-white px-4 py-2 rounded-md"
+            className="border-2 border-white text-white px-4 py-2 rounded-3xl"
           >
             <h2>{item.text}</h2>
           </div>

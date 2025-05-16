@@ -52,7 +52,7 @@ const HomePage = () => {
   const container = useRef(null);
   const isInView = useInView(container, { once: true, root: container });
   return (
-    <div className=" overflow-hidden w-full flex flex-col gap-5 bg-gradient-vertical text-white ">
+    <div className=" overflow-hidden w-full flex flex-col gap-5 bg-gradient-horizontal text-white ">
       <NavBar />
 
       <Herotext text={"Teach That Fuels influence"} />
@@ -64,12 +64,12 @@ const HomePage = () => {
 
       <HomeHero2 />
 
-      <div className="w-full px-6 sm:px-10 mt-10 h-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
+      {/* <div className="w-full px-6 sm:px-10 mt-10 h-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
         <Card />
         <Card />
         <Card />
         <Card />
-      </div>
+      </div> */}
       {/* <div ref={container} className="w-full mt-10 h-[80vh]  overflow-y-auto snap-y snap-mandatory scrollbar-hide ">
         {offerCardsData.map((card, index) => (
           <motion.div

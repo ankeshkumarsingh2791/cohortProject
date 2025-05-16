@@ -14,12 +14,12 @@ const Description = ({text}) => {
         className='md:w-1/2 flex-col m-10 rounded-2xl  flex justify-between  gap-4'>
             <p 
           
-            className=' text-3xl md:text-7xl   font-bold text-white '>
+            className=' text-center md:text-left text-3xl md:text-7xl   font-bold text-white '>
                 What <br /> Define Us
             </p>
             <p 
                 ref={ref}
-            className='text-2xl   font-medium text-white'>
+            className='text-2xl text-center md:text-left  font-medium text-white'>
                 {/* {text.split("").map((letter, index) => (
                     <motion.span
                         key={index}

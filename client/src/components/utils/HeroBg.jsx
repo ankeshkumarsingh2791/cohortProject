@@ -3,7 +3,7 @@ import React from 'react';
 const HeroBg = () => {
   return (
     <div
-      className="w-full h-screen bg-cover object-fill bg-center bg-no-repeat"
+      className=" h-[100vh] bg-cover object-fill bg-center bg-no-repeat"
       style={{ backgroundImage: `url('/Service.jpg')` }}
     >
       {/* Optional: Add content inside this background */}

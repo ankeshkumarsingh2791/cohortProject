@@ -35,6 +35,7 @@ const Testimonial = () => {
   return (
     <section className='pb-12'>
     <div className='container mx-auto px-4'>
+      <p className='bg-gradient-to-r from-[#fff] via-slate-100 to-[#6404DF] bg-clip-text text-transparent text-4xl text-center font-semibold '>Testimonial</p>
     
     <p className="flex justify-center items-center text-md md:text-xl wide px-3 pb-3 text-center">Know what people think about us ?</p>
 
