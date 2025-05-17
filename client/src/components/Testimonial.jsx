@@ -35,9 +35,15 @@ const Testimonial = () => {
   return (
     <section className='pb-12'>
     <div className='container mx-auto px-4'>
-      <p className='bg-gradient-to-r from-[#fff] via-slate-100 to-[#6404DF] bg-clip-text text-transparent text-4xl text-center font-semibold '>Testimonial</p>
+      <p className='leading-tight bg-gradient-to-r from-[#FFFFFF] via-slate-300  to-[#9746FF] bg-clip-text text-transparent text-6xl text-center font-semibold '>Testimonial</p>
     
-    <p className="flex justify-center items-center text-md md:text-xl wide px-3 pb-3 text-center">Know what people think about us ?</p>
+    <div className='flex items-center text-xl sm:text-3xl font-semibold justify-center gap-2 my-4'>
+      <p>Here From</p>
+      <div className=" bg-gradient-to-r from-[#6011DF] to-[#1B95A3]  text-white font-semibold py-2 px-4 rounded-md inline-block">
+            Business
+          </div>
+          <p> That Trust Us</p>
+    </div>
 
       {/* Scrolling Container */}
       <div className="relative overflow-hidden w-full group">

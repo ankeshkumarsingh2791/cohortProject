@@ -45,24 +45,24 @@ const NavBar = () => {
 
 
   return (
-    <div  className={`w-full  px-4 py-2 text-xl flex justify-between items-center  fixed top-0 left-0 z-50 transition-colors duration-300 ${
+    <div  className={`w-full  px-4 py-2 text-xl flex justify-between items-center text-white  fixed top-0 left-0 z-50 transition-colors duration-300 ${
       isScrolled ? 'bg-gradient-vertical h-16 shadow-md' : 'bg-transparent'
     }`}>
        <div>Logo</div>
        <div>
         
-        <div className=' flex items-center'>
+        <div className=' flex items-center '>
           <button onClick={() => setIsHamburger(!isHamburger)}>
             {isHamburger ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-right-icon lucide-align-right"><path d="M21 12H9"/><path d="M21 18H7"/><path d="M21 6H3"/></svg>}
           </button>
           {isHamburger && (
-            <div className=' w-full h-screen absolute top-10 right-0 bg-white  p-4'>
+            <div className=' w-full h-screen absolute top-10 right-0  bg-white text-red-400  p-4'>
               <motion.div 
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-              className='flex flex-col mt-10 px-8 mb-4 space-y-2 hover:text-blue-400'>
+              className='flex flex-col mt-10 px-8 mb-4 space-y-2 text-white '>
               {navLinks.map((link) => (
             <NavLink
               key={link.name}
