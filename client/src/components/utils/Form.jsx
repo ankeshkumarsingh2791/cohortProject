@@ -5,21 +5,45 @@ import { useState } from "react";
 
 const Form = () => {
   const [loading, setLoading] = useState(false);
+  // 4cddccc4-ca22-45eb-98f4-dfe859cd96a6
+   const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "4cddccc4-ca22-45eb-98f4-dfe859cd96a6");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
+  };
+
   return (
-    <div className="w-full h-full flex flex-col bg-gray-300 gap-8 mb-4 rounded-3xl shadow-2xl p-4 md:pr-6">
+    <form onSubmit={onSubmit} className="w-full h-full flex flex-col mb-4 rounded-3xl  p-4 md:pr-6">
       <h1 className="  font-semibold text-3xl">Are You Interested In : </h1>
       
-      <div className="w-full  grid grid-cols-1 xl:grid-cols-2 gap-10 justify-between ">
-        <Input type={"text"} title={"First Name"} required={true} />
-        <Input type={"text"} title={"Last Name"} required={true} />
-        <Input type={"email"} title={"Email Address"} required={true} />
-        <Input type={"phone"} title={"Mobile Number"} required={true} />
+      <div className="w-full  grid grid-cols-1 gap-2 justify-between ">
+        <Input type={"text"} name={"first_name"} title={"First Name"} required={true} />
+        <Input type={"text"} name={"last_name"} title={"Last Name"} required={true} />
+        <Input type={"email"} name={"email"} title={"Email Address"} required={true} />
+        <Input type={"phone"} name={"contact"} title={"Mobile Number"} required={true} />
       </div>
       <div className="">
-        <TextArea type={"text"} title={"Enter Your Message"} />
+        <TextArea type={"text"} name={"message"} title={"Enter Your Message"} />
       </div>
       <div className="w-full flex items-center justify-center col-span-2">
-        <button className="p-4 flex bg-gradient-horizontal text-gray-50 font-medium rounded-4xl">
+        <button type="submit" className="p-4 flex bg-gradient-horizontal text-gray-50 font-medium rounded-4xl">
           GET IN TOUCH{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +63,7 @@ const Form = () => {
           </svg>
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 
