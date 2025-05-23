@@ -11,9 +11,9 @@ const PopCard = ({onClose}) => {
       </h1>
         </div>
         <div className='lg:w-1/2 px-2 lg:my-8'>
-        <button className='text-white' onClick={onClose}>close</button>
+        <button className='text-white ' onClick={onClose}>close</button>
 
-            <Form />
+            <Form onSuccess={onClose} />
         </div>
     </div>
   )
