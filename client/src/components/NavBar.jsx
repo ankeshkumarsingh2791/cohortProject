@@ -49,27 +49,32 @@ const NavBar = () => {
       isScrolled ? 'bg-gradient-vertical h-16 shadow-md' : 'bg-transparent'
     }`}>
        <div>Logo</div>
-       <div>
-        
+    
+
         <div className=' flex items-center '>
           <button onClick={() => setIsHamburger(!isHamburger)}>
             {isHamburger ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-right-icon lucide-align-right"><path d="M21 12H9"/><path d="M21 18H7"/><path d="M21 6H3"/></svg>}
           </button>
           {isHamburger && (
-            <div className=' w-full h-screen absolute top-10 right-0  bg-white text-red-400  p-4'>
+            <div className=' w-full h-screen absolute top-0 right-0  bg-gradient-vertical  p-4'>
+              <div className='flex justify-end '>
+              <button onClick={() => setIsHamburger(!isHamburger)}>
+            {isHamburger ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> : <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-right-icon lucide-align-right"><path d="M21 12H9"/><path d="M21 18H7"/><path d="M21 6H3"/></svg>}
+          </button>
+                </div>
               <motion.div 
             initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
-              className='flex flex-col mt-10 px-8 mb-4 space-y-2 text-white '>
+              className='flex flex-col mt-10 px-8 mb-4 space-y-2  '>
               {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
                 `transition-colors text-4xl font-medium mt-2 duration-200 ${
-                  isActive ? 'text-blue-600 font-semibold' : 'text-gray-800 hover:text-blue-500'
+                  isActive ? 'text-blue-600 font-semibold' : 'text-slate-100 hover:text-blue-500'
                 }`
               }
             >
@@ -82,7 +87,7 @@ const NavBar = () => {
           )}
           
         </div>
-       </div>
+       
     </div>
   );
 };
