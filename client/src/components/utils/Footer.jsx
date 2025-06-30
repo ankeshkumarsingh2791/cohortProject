@@ -275,7 +275,7 @@ const Footer = () => {
               href="#"
               className="text-gray-700 underline transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
             >
-              Ankesh&Ravikant
+              Ankesh
             </a>
             .
           </p>
