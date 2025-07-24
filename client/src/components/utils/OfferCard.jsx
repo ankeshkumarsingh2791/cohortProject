@@ -8,14 +8,13 @@ const OfferCard = ({ title, leftImage, rightImage, items }) => {
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: 0.2 }}
-    viewport={{ once: false, amount: 0.3 }}
-    className="w-full mt-10 rounded-2xl bg-[#9746FF] pb-8  lg:py-8 px-4 flex flex-col-reverse sm:flex-row justify-between sm:items-center">
-      <div className="sm:w-1/2 px-6">
-      <div className="w-32 h-32 mt-10 rounded-full bg-[#0E79F3] flex justify-center items-center ">
-
-        <img src={leftImage} className="w-20 h-20 object-cover" />
+    viewport={{ once: true, amount: 0.3 }}
+    className="w-full min-h-80 rounded-2xl bg-[#9746FF] px-7 py-7 md:py-3 flex flex-col-reverse md:flex-row justify-between items-center md:items-start">
+      <div className="w-full md:w-1/2">
+      <div className="w-17 h-17 mt-4 rounded-full bg-[#0E79F3] flex justify-center items-center">
+        <img src={leftImage} className="w-15 h-15 object-cover" />
       </div>
-        <h1 className="text-xl font-medium my-2 md:text-2xl">{title}</h1>
+        <h1 className="text-xl font-medium my-2 md:text-3xl text-center">{title}</h1>
         <div className=" w-full grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {items?.map((item, index) => (
@@ -28,7 +27,7 @@ const OfferCard = ({ title, leftImage, rightImage, items }) => {
         ))} 
         </div>
       </div>
-      <div className="sm:w-1/2 flex justify-center items-center ">
+      <div className="w-full p-3 md:p-0 md:w-1/2 flex justify-center items-center ">
         <img src={rightImage} className=" object-fill  rounded-3xl h-[300px]" />
       </div>
     </motion.div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import PopupContainer from "./PopupContainer";
 import PopCard from "./PopCard";
 import { motion, useInView } from "framer-motion";
+import TypeWriter from "./TypeWriter";
+import { NavLink } from "react-router-dom";
 
 const Herotext = ({ text = "Typing Effect", className }) => {
   const [show, setShow] = useState(false);
@@ -12,7 +14,7 @@ const Herotext = ({ text = "Typing Effect", className }) => {
     setShow(false);
   };
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -24,30 +26,21 @@ const Herotext = ({ text = "Typing Effect", className }) => {
     }
   }, [isInView, text]);
   return (
-    <div
-      className={`w-full mt-20  lg:h-screen  flex justify-center items-center  flex-col max-h-screen ${className}`}
+    <motion.div
+      initial={{opacity:0, y:-500}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1}}
+      className={`w-full mt-20 h-screen  flex justify-center items-center  flex-col max-h-screen ${className}`}
     >
-      <h2
+      <div
         ref={ref}
-        className="text-4xl bg-gradient-to-r from-[#FFFFFF] via-slate-100  to-[#6404DF] bg-clip-text text-transparent  text-center sm:text-7xl font-bold lg:text-9xl lg:leading-[4rem]   md:leading-[2rem]"
       >
-        {text.split(" ").map((letter, index) => (
-        <motion.span
-        key={`${animationKey}-${index}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: index * 0.5 }}
-        className="inline-block md:py-10 px-2 md:px-4"
-      >
-          {letter}
-        </motion.span>
-      ))}
-
-       
-      </h2>
+        <TypeWriter text={text} speed={100}/>
+      </div>
+      <NavLink to={"/contact"}>
       <button
         onClick={handlePop}
-        className="p-4 mt-10 flex bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl"
+        className="p-4 mt-10 flex bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl cursor-pointer"
       >
         GET IN TOUCH{" "}
         <svg
@@ -67,12 +60,8 @@ const Herotext = ({ text = "Typing Effect", className }) => {
           <path d="m12 5 7 7-7 7" />
         </svg>
       </button>
-      {show && (
-        <PopupContainer>
-          <PopCard onClose={closePop} />
-        </PopupContainer>
-      )}
-    </div>
+      </NavLink>
+    </motion.div>
   );
 };
 
