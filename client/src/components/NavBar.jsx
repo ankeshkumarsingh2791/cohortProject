@@ -2,8 +2,7 @@
 import { useEffect,useState } from 'react';
 import { NavLink,Link } from 'react-router-dom';
 import {motion} from 'framer-motion';
-
-
+import BrandLogo from './utils/Logo/BrandLogo';
 
 
 const navLinks = [
@@ -16,9 +15,9 @@ const navLinks = [
 
 const DesktopNav = () => {
   return (
-    <div className="flex justify-between items-center bg-gradient-to-r from-[#1C0B80]/90 to-[#4B14B0]/90 backdrop-blur-md p-4 sm:p-5 fixed top-0 w-full z-[100] shadow-md">
-      <div className="ml-4 sm:ml-7 text-xl sm:text-2xl font-extrabold text-white tracking-wide">
-        Logo
+    <div className="flex justify-between items-center bg-gradient-to-r from-[#1C0B80]/90 to-[#4B14B0]/90 backdrop-blur-md p-3 sm:p-4 fixed top-0 w-full z-[100] shadow-md">
+      <div className="ml-4 sm:ml-7 text-xl sm:text-2xl font-extrabold">
+        <BrandLogo/>
       </div>
       <div className="flex items-center">
         {navLinks.map(({ name, path }, idx) => (
@@ -61,7 +60,7 @@ const MobileNav = () => {
           isScrolled ? 'bg-[#1C0B80]/90 shadow-md' : 'bg-transparent'
         }`}
       >
-        <div className="font-bold">Logo</div>
+        <div className=""><BrandLogo/></div>
         <button onClick={() => setIsHamburger(!isHamburger)} aria-label="Toggle menu">
           {isHamburger ? (
             <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

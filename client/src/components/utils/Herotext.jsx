@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import PopupContainer from "./PopupContainer";
-import PopCard from "./PopCard";
 import { motion, useInView } from "framer-motion";
 import TypeWriter from "./TypeWriter";
 import { NavLink } from "react-router-dom";
@@ -51,9 +49,9 @@ const Herotext = ({ text = "Typing Effect", className }) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           class="lucide lucide-arrow-right-icon lucide-arrow-right"
         >
           <path d="M5 12h14" />

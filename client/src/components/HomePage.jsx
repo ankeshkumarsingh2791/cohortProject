@@ -40,7 +40,7 @@ const HomePage = () => {
   const isInView = useInView(container, { once: true, root: container });
   return (
     <div className=" overflow-hidden w-full flex flex-col gap-y-15 bg-gradient-horizontal text-white">
-      <Herotext text={"Teach That Fuels influence"} />
+      <Herotext text={"Taech That Fuels influence"} />
       <Description
         text={
           "We create powerful narratives and forge impactful partnerships, redefining the standards of the Indian creator economy."
