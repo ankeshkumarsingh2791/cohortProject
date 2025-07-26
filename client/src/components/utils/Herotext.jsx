@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import TypeWriter from "./TypeWriter";
 import { NavLink } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Herotext = ({ text = "Typing Effect", className }) => {
   const [show, setShow] = useState(false);
@@ -38,25 +39,24 @@ const Herotext = ({ text = "Typing Effect", className }) => {
       <NavLink to={"/contact"}>
       <button
         onClick={handlePop}
-        className="p-4 mt-10 flex bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl cursor-pointer"
+        className="relative mt-10 overflow-hidden flex group bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl cursor-pointer z-3"
       >
-        GET IN TOUCH{" "}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="animate-ping ml-2"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          class="lucide lucide-arrow-right-icon lucide-arrow-right"
-        >
-          <path d="M5 12h14" />
-          <path d="m12 5 7 7-7 7" />
-        </svg>
+        
+        <div
+        style={{
+          WebkitMaskImage:
+            'radial-gradient(circle at 100% 50%, transparent 25px, black 23px)',
+          maskImage:
+            'radial-gradient(circle at 100% 50%, transparent 25px, black 23px)',
+          WebkitMaskComposite: 'destination-out',
+          maskComposite: 'exclude',
+        }}
+         className="absolute w-full h-full bg-white/40 z-8 -left-[100%] group-hover:-left-[10%] transition-all duration-500 rounded-l-full">
+        </div>
+        <span className="px-7 py-3 flex font-bold gap-4">
+          <div>GET IN TOUCH{" "}</div>
+          <ArrowRight strokeWidth={2} className="group-hover:translate-x-4 transition-all ease-linear duration-500"/>
+        </span>
       </button>
       </NavLink>
     </motion.div>

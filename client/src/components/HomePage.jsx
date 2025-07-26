@@ -47,7 +47,8 @@ const HomePage = () => {
         }
       />
       <StatsSection/>
-      <HomeHero2 />
+      
+      <InfoSection/>
 
       <div 
       ref={container}
@@ -63,7 +64,6 @@ const HomePage = () => {
             />
         ))}
       </div>
-      <InfoSection/>
       <Testimonial />
     </div>
   );

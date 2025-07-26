@@ -102,9 +102,9 @@ const Form = ({ onSuccess }) => {
         <button
           type="submit"
           disabled={loading}
-          className="px-8 py-4 bg-gradient-to-r from-[#6A5BFF] to-[#A685E2] text-white font-semibold rounded-full shadow-md hover:scale-105 transition-transform duration-300 disabled:opacity-60"
+          className="px-6 py-2 cursor-pointer hover:to-transparent hover:from-transparent bg-gradient-to-r border-2 border-violet-500 from-[#6A5BFF] to-[#A685E2] text-white font-semibold rounded-full shadow-md hover:scale-105 transition-all duration-500 disabled:opacity-60"
         >
-          {loading ? "SENDING..." : "GET IN TOUCH"}
+          {loading ? "SENDING..." : "Send Message"}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="ml-3 inline-block -mt-1"
