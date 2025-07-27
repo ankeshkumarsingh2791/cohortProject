@@ -5,8 +5,8 @@ const AboutUs = () => {
   return (
     <div className='bg-gradient-horizontal pt-25 flex flex-col justify-center items-center'>
       {/* heading */}
-      <motion.div initial={{y:-200, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.8}} viewport={{once:true}} className='flex flex-col gap-3 items-center justify-center'> 
-        <div><h1 className='text-5xl sm:text-6xl md:text-7xl text-white font-bold bg-gradient-to-r from-violet-500 to-sky-400 rounded-xl p-1 text-center'>ABOUT US</h1></div>
+      <motion.div initial={{y:-100, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.8}} viewport={{once:true}} className='flex flex-col gap-3 items-center justify-center'> 
+        <div><h1 className='text-3xl md:text-5xl text-white font-bold bg-gradient-to-r from-violet-500 to-sky-400 p-1 text-center'>ABOUT US</h1></div>
         <div><h4 className='text-xl sm:text-2xl md:text-4xl text-white font-semibold w-[20rem] sm:w-[30rem] md:w-[40rem] tracking-wider text-center'>At ZENIFO, We work differently.</h4></div>
       </motion.div>
       {/* upper */}
