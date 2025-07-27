@@ -1,62 +1,54 @@
 import React from 'react'
-import TestimonialCard from './utils/TestimonialCard'
+import TestiMonialCardInfo from './utils/TestiMonialCardInfo';
 
 const Testimonial = () => {
-  const founders = [
+  const founders= [
     {
-      name: 'Dummy Data',
-      role: 'CEO & Co-founder',
-      image: " /home.svg",
-      description:
-        'Shiksha Setu is a comprehensive student management system designed to support and enhance the operations of educational institutions. It provides a centralized platform for managing various academic and administrative functions, facilitating effective communication, and streamlining processes for students, parents, teachers, and administrators.',
-    },
-    {
-      name: 'Dummy Data',
-      role: 'CTO & Co-founder',
+      name: "Name 2",
+      role: "developer",
       image: "/home1.png",
       description:
-        'Shiksha Setu is a comprehensive student management system designed to support and enhance the operations of educational institutions. It provides a centralized platform for managing various academic and administrative functions, facilitating effective communication, and streamlining processes for students, parents, teachers, and administrators.',
+        "As a parent, having real-time access to my child’s progress, attendance, and homework is incredibly reassuring. Shiksha Setu bridges the gap between school and home beautifully."
     },
     {
-      name: 'Dummy Data',
-      role: 'Chief Business Officer',
+      name: "Name 3",
+      role: "developer",
       image: "/home.svg",
       description:
-        'Shiksha Setu is a comprehensive student management system designed to support and enhance the operations of educational institutions. It provides a centralized platform for managing various academic and administrative functions, facilitating effective communication, and streamlining processes for students, parents, teachers, and administrators.',
+        "The platform’s intuitive interface and robust features have made managing large student batches and grading much easier. The support team is also quick and responsive."
     },
     {
-      name: 'Dummy Data',
-      role: 'Chief Innovation Officer',
+      name: "Name 4",
+      role: "developer",
       image: "/home1.png",
       description:
-        'Shiksha Setu is a comprehensive student management system designed to support and enhance the operations of educational institutions. It provides a centralized platform for managing various academic and administrative functions, facilitating effective communication, and streamlining processes for students, parents, teachers, and administrators.',
-    },
+        "We’ve seen a noticeable improvement in communication and workflow since adopting Shiksha Setu. The analytics dashboard, in particular, helps us make data-driven decisions daily."
+    }
   ];
+  
   return (
     <section className='pb-12'>
     <div className='container mx-auto px-4'>
       <p className='leading-tight bg-gradient-to-r from-[#FFFFFF] via-slate-300  to-[#9746FF] bg-clip-text text-transparent text-6xl text-center font-semibold '>Testimonial</p>
     
     <div className='flex items-center text-xl sm:text-3xl font-semibold justify-center gap-2 my-4'>
-      <p>Here From</p>
-      <div className=" bg-gradient-to-r from-[#6011DF] to-[#1B95A3]  text-white font-semibold py-2 px-4 rounded-md inline-block">
+      <p className='text-center'>Here From
+      <span className=" bg-gradient-to-r from-[#6011DF] to-[#1B95A3]  text-white font-semibold py-2 px-2 inline-block">
             Business
-          </div>
-          <p> That Trust Us</p>
+          </span>
+      That Trust Us</p>
     </div>
 
       {/* Scrolling Container */}
       <div className="relative overflow-hidden w-full group">
-        <div className="flex animate-scroll my-4">
-          {founders.concat(founders).map((founder, index) => (
-            <div key={index} className={`flex-shrink-0 w-80 transition-all duration-300 ${index % 2 === 0 ? 'mt-0' : 'mt-15'}`}>
-              <TestimonialCard
-                name={founder.name}
-                index={founder.name+ " " +index}
-                role={founder.role}
-                image={founder.image}
-                description={founder.description}
-              />
+        <div className="flex flex-wrap justify-center gap-3 items-center my-4">
+          {founders.map((founder, index) => (
+            <div key={index} className={`flex-shrink-0 w-80 transition-all duration-300`}>
+              <TestiMonialCardInfo 
+              name={founder.name} 
+              role={founder.role} 
+              image={founder.image} 
+              description={founder.description}/>
             </div>
           ))}
         </div>

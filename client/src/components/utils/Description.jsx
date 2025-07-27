@@ -1,46 +1,55 @@
-import React from 'react'
-import { motion, useInView } from 'framer-motion'
+'use client';
+
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 import ContentTimeLine from '../ContentTimeLine';
-const Description = ({text}) => {
-    const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: false });
+
+const heroTextVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: 'easeOut' },
+  },
+  exit: {
+    opacity: 0,
+    x: 100,
+    transition: { duration: 0.3, ease: 'easeIn' },
+  },
+};
+
+const Description = ({ text }) => {
+  const ref = useRef(null);
+
   return (
-    <div className='w-full h-screen md:flex  justify-between items-center  md:flex-row '>
-        <motion.div 
-        initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: false, amount: 0.3 }}
-        className='md:w-1/2 flex-col m-10 rounded-2xl  flex justify-between  gap-4'>
-            <p 
-          
-            className=' text-center md:text-left text-3xl md:text-7xl   font-bold text-white '>
-                What <br /> Define Us
-            </p>
-            <p 
-                ref={ref}
-            className='text-2xl text-center md:text-left  font-medium text-white'>
-                {/* {text.split("").map((letter, index) => (
-                    <motion.span
-                        key={index}
-                        initial={{opacity: 0,}}
-                        animate={isInView ? {opacity: 1,} : {}}
-                        transition={{duration: 0.2, delay: index * 0.1}}
-                        >
-                            {letter}
-                    </motion.span>
-                ))} */}
-                {text}
-                
-            </p>
-        </motion.div>
+    <div className="w-full h-screen flex flex-col md:flex-row items-center px-6 md:px-12">
+      {/* Animated Text Section */}
+      <motion.div
+        variants={heroTextVariants}
+        initial="hidden"
+        whileInView="visible"
+        exit="exit"
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full md:w-1/2 flex flex-col gap-6 rounded-2xl"
+      >
+        <p className="text-center md:text-left text-3xl md:text-7xl text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-white to-[#9746FF]">
+          What <br /> Define Us
+        </p>
 
-        <div className='md:w-1/2 '>
-            <ContentTimeLine />
-        </div>
+        <p
+          ref={ref}
+          className="text-lg md:text-2xl text-center md:text-left font-medium text-white max-w-xl"
+        >
+          {text}
+        </p>
+      </motion.div>
 
+      {/* Timeline Section */}
+      <div className="w-full md:w-1/2 mt-10 md:mt-0">
+        <ContentTimeLine />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Description
+export default Description;

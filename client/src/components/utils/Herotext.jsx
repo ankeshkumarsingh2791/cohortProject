@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import PopupContainer from "./PopupContainer";
-import PopCard from "./PopCard";
 import { motion, useInView } from "framer-motion";
+import TypeWriter from "./TypeWriter";
+import { NavLink } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Herotext = ({ text = "Typing Effect", className }) => {
   const [show, setShow] = useState(false);
@@ -12,7 +13,7 @@ const Herotext = ({ text = "Typing Effect", className }) => {
     setShow(false);
   };
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -24,55 +25,41 @@ const Herotext = ({ text = "Typing Effect", className }) => {
     }
   }, [isInView, text]);
   return (
-    <div
-      className={`w-full mt-20  lg:h-screen  flex justify-center items-center  flex-col max-h-screen ${className}`}
+    <motion.div
+      initial={{opacity:0, y:-500}}
+      animate={{opacity:1, y:0}}
+      transition={{duration:1}}
+      className={`w-full mt-20 h-screen  flex justify-center items-center  flex-col max-h-screen ${className}`}
     >
-      <h2
+      <div
         ref={ref}
-        className="text-4xl bg-gradient-to-r from-[#FFFFFF] via-slate-100  to-[#6404DF] bg-clip-text text-transparent  text-center sm:text-7xl font-bold lg:text-9xl lg:leading-[4rem]   md:leading-[2rem]"
       >
-        {text.split(" ").map((letter, index) => (
-        <motion.span
-        key={`${animationKey}-${index}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: index * 0.5 }}
-        className="inline-block md:py-10 px-2 md:px-4"
-      >
-          {letter}
-        </motion.span>
-      ))}
-
-       
-      </h2>
+        <TypeWriter text={text} speed={100}/>
+      </div>
+      <NavLink to={"/contact"}>
       <button
         onClick={handlePop}
-        className="p-4 mt-10 flex bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl"
+        className="relative mt-10 overflow-hidden flex group bg-[#9746FF] text-gray-50 font-medium shadow-2xl rounded-4xl cursor-pointer z-3"
       >
-        GET IN TOUCH{" "}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="animate-ping ml-2"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-arrow-right-icon lucide-arrow-right"
-        >
-          <path d="M5 12h14" />
-          <path d="m12 5 7 7-7 7" />
-        </svg>
+        
+        <div
+        style={{
+          WebkitMaskImage:
+            'radial-gradient(circle at 100% 50%, transparent 25px, black 23px)',
+          maskImage:
+            'radial-gradient(circle at 100% 50%, transparent 25px, black 23px)',
+          WebkitMaskComposite: 'destination-out',
+          maskComposite: 'exclude',
+        }}
+         className="absolute w-full h-full bg-white/40 z-8 -left-[100%] group-hover:-left-[10%] transition-all duration-500 rounded-l-full">
+        </div>
+        <span className="px-7 py-3 flex font-bold gap-4">
+          <div>GET IN TOUCH{" "}</div>
+          <ArrowRight strokeWidth={2} className="group-hover:translate-x-4 transition-all ease-linear duration-500"/>
+        </span>
       </button>
-      {show && (
-        <PopupContainer>
-          <PopCard onClose={closePop} />
-        </PopupContainer>
-      )}
-    </div>
+      </NavLink>
+    </motion.div>
   );
 };
 
