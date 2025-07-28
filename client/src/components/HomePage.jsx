@@ -7,6 +7,7 @@ import Description from "./utils/Description";
 import { useInView } from "framer-motion";
 import StatsSection from "./StatsSection";
 import InfoSection from "./InfoSection";
+import { Helmet } from "react-helmet";
 
 const offerCardsData = [
   {
@@ -39,6 +40,11 @@ const HomePage = () => {
   const container = useRef(null);
   const isInView = useInView(container, { once: true, root: container });
   return (
+    <>
+      <Helmet>
+        <title>Zenifo | Home - Elevating Your Digital Presence</title>
+        <meta name="description" content="Zenifo offers cutting-edge software development and SEO optimization to take your business to the next level." />
+      </Helmet>
     <div className=" overflow-hidden w-full flex flex-col gap-y-15 bg-gradient-horizontal text-white">
       <Herotext text={"Taech That Fuels influence"} />
       <Description
@@ -66,6 +72,7 @@ const HomePage = () => {
       </div>
       <Testimonial />
     </div>
+    </>
   );
 };
 

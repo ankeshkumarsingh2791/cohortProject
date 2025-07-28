@@ -1,8 +1,14 @@
 import React from 'react'
 import {motion} from "framer-motion"
 import StatsSection from '../components/StatsSection';
+import { Helmet } from "react-helmet";
 const AboutUs = () => {
   return (
+    <>
+     <Helmet>
+        <title>About Zenifo | Your Tech Partner</title>
+        <meta name="description" content="Learn more about Zenifo, your trusted partner in software development, SEO, and digital transformation." />
+      </Helmet>
     <div className='bg-gradient-horizontal pt-25 flex flex-col justify-center items-center'>
       {/* heading */}
       <motion.div initial={{y:-100, opacity:0}} whileInView={{y:0, opacity:1}} transition={{duration:0.8}} viewport={{once:true}} className='flex flex-col gap-3 items-center justify-center'> 
@@ -38,6 +44,7 @@ const AboutUs = () => {
             </motion.div>
         </div>
     </div>
+    </>
   )
 }
 

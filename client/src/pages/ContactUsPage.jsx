@@ -2,11 +2,20 @@ import React from 'react';
 import Form from '../components/utils/Form';
 import { motion } from 'framer-motion';
 import useBreakpointValue from '../hooks/useBreakpointValue'; 
+import { Helmet } from "react-helmet";
 
 const ContactUsPage = () => {
   const xOffset = useBreakpointValue();
 
   return (
+    <>
+    <Helmet>
+        <title>Contact Zenifo | Let’s Build Something Great</title>
+        <meta
+          name="description"
+          content="Get in touch with Zenifo for custom tech solutions, SEO services, or digital consultations. We’re here to help you grow online."
+        />
+      </Helmet>
     <div className="w-full bg-gradient-horizontal text-white overflow-hidden">
       <motion.div
         initial={{ opacity: 0, x: xOffset }}
@@ -28,6 +37,7 @@ const ContactUsPage = () => {
         </div>
       </motion.div>
     </div>
+    </>
   );
 };
 
