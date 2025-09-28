@@ -25,7 +25,7 @@ const ServiceCard = ({className}) => {
         </div>
       </div>
       <div className="md:w-1/2 ">
-        <img src="/Ankesh.jpg" className="w-full h-[550px] object-cover" />
+        <img src="/Ankesh.jpg" alt="/service-1" className="w-full h-[550px] object-cover" />
       </div>
     </div>
   );

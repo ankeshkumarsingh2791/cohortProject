@@ -4,22 +4,22 @@ import TestiMonialCardInfo from './utils/TestiMonialCardInfo';
 const Testimonial = () => {
   const founders= [
     {
-      name: "Name 2",
-      role: "developer",
+      name: "Sunil Kumar Singh",
+      role: "Business Man ",
       image: "/home1.png",
       description:
         "As a parent, having real-time access to my child’s progress, attendance, and homework is incredibly reassuring. Shiksha Setu bridges the gap between school and home beautifully."
     },
     {
-      name: "Name 3",
-      role: "developer",
+      name: "Ritika Singh",
+      role: "Vice Principal",
       image: "/home.svg",
       description:
         "The platform’s intuitive interface and robust features have made managing large student batches and grading much easier. The support team is also quick and responsive."
     },
     {
-      name: "Name 4",
-      role: "developer",
+      name: "A.k Bhakshi ",
+      role: "Principal (D.A.V)",
       image: "/home1.png",
       description:
         "We’ve seen a noticeable improvement in communication and workflow since adopting Shiksha Setu. The analytics dashboard, in particular, helps us make data-driven decisions daily."

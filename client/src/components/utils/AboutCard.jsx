@@ -25,7 +25,7 @@ const AboutCard = ({className}) => {
         </div>
       </div>
       <div className="md:w-1/2 ">
-        <img src="/Ankesh.jpg" className="w-full h-[550px] object-cover" />
+        <img src="/Ankesh.jpg" alt="ankesh/img" className="w-full h-[550px] object-cover" />
       </div>
     </div>
   );

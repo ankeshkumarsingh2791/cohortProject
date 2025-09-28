@@ -11,7 +11,7 @@ const HomeHero = () => {
             </div>
            
             <div className='w-1/2 flex flex-col items-center justify-center'>
-                <img src='home1.png' className=' mt-10  h-[500px]'/>
+                <img src='home1.png' alt='/home1' className=' mt-10  h-[500px]'/>
             </div>
         </div>
         <div className='flex  justify-center'>

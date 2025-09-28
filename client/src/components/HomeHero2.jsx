@@ -17,11 +17,11 @@ const HomeHero2 = () => {
        <motion.div 
        
        className=" absolute -top-16 lg:top-10 -left-2 md:left-12  ">
-        <img src="/img2.jpg" className="w-60 h-44 rounded-2xl border-t-8 border-[#9746FF] object-fill" />
+        <img src="/img2.jpg" alt="/img1" className="w-60 h-44 rounded-2xl border-t-8 border-[#9746FF] object-fill" />
        </motion.div>
 
        <div className=" absolute top-[60%] md:bottom-28 right-0 md:right-12 ">
-        <img src="/img1.jpg" className="w-60 h-44   rounded-2xl border-t-8 border-[#9746FF] object-fill" />
+        <img src="/img1.jpg" alt="/img2" className="w-60 h-44   rounded-2xl border-t-8 border-[#9746FF] object-fill" />
        </div>
         <div className=" w-full  md:w-[75%] border-4 rounded-2xl  border-dashed  h-[280px] mx-4 md:mx-0 md:m-10 shadow-lg">
 
@@ -58,7 +58,7 @@ const HomeHero2 = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="bg-[#9B45E4] rounded-2xl p-3 w-64 flex flex-col items-center text-white shadow-lg">
-            <img src="/deliverable 1.svg" alt="Icon" className="w-10 h-10 mb-4" />
+            <img src="/deliverable 1.svg" alt="Icon2" className="w-10 h-10 mb-4" />
             <h3 className="text-2xl font-bold">10,000+</h3>
             <p className="text-center text-sm">
               Creators <br /> Collaborated With
@@ -75,7 +75,7 @@ const HomeHero2 = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div className="bg-[#9B45E4] rounded-2xl p-3 w-64 flex flex-col items-center text-white shadow-lg">
-            <img src="/closure 1.svg" alt="Icon" className="w-10 h-10 mb-4" />
+            <img src="/closure 1.svg" alt="Icon4" className="w-10 h-10 mb-4" />
             <h3 className="text-2xl font-bold">200+</h3>
             <p className="text-center text-sm">
               Projects <br /> Completed

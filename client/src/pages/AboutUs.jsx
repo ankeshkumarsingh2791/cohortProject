@@ -21,7 +21,7 @@ const AboutUs = () => {
                 <h1 className='text-4xl md:text-6xl text-transparent bg-clip-text font-extrabold bg-gradient-to-r to-violet-300 from-sky-100'>What We Do</h1>
                 <p className='text-lg -tracking-tighter font-semibold text-white'>we are passionate technologists, creative thinkers, and problem solvers driven by one goal: to build intelligent software that empowers businesses and enhances lives.</p>
             </motion.div>
-            <motion.div initial={{x:200, opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration:0.8}} viewport={{once:true}} className='w-full md:w-1/2 md:h-1/3 rounded-4xl'><img src="/AboutUsLogo1.jpg" alt="about us" className='rounded-4xl'/></motion.div>
+            <motion.div initial={{x:200, opacity:0}} whileInView={{x:0, opacity:1}} transition={{duration:0.8}} viewport={{once:true}} className='w-full md:w-1/2 md:h-1/3 rounded-4xl'><img src="/AboutUsLogo1.jpg" alt="about_us_2" className='rounded-4xl'/></motion.div>
         </div>
       {/* middle */}
       <StatsSection/>
